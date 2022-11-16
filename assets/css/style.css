@@ -195,6 +195,10 @@ display: block;
   text-align: center;
   padding: 0 20px;
 }
+.corporate-block .w-25:nth-child(2) .corporate-content {
+background: url('../img/bg-2.png') no-repeat;
+background-size: cover;
+}
 .corporate-content {
 	background: url('../img/corprote.png') no-repeat;
 	background-size: cover;
@@ -202,6 +206,15 @@ display: block;
 height: 35vw;
 padding-top: 40px;
 }
+.corporate-block .w-25:nth-child(3) .corporate-content {
+background: url('../img/bg3.png') no-repeat;
+background-size: cover;
+}
+.corporate-block .w-25:nth-child(4) .corporate-content {
+background: url('../img/bg4.png') no-repeat;
+background-size: cover;
+}
+
 .corporate-content h3 {
   display: block;
   text-align: center;
@@ -302,7 +315,7 @@ overflow: hidden;
   background: #000000;
   width: 280px;
   padding-top: 80px;
-  left: -260px;
+  left: -290px;
 visibility: hidden;
 transition: all .5s ease 0s;
 }
@@ -324,16 +337,8 @@ transition: all .5s ease 0s;
 }
 .navbar .d-flex li a::before {display: none;}
 .openNav .navbar {
-  transform: translate3d(260px,0,0);
+  transform: translate3d(290px,0,0);
   visibility: visible;
-}
-.openNav body {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.6);
 }
 .container {
   max-width: 100%;
@@ -377,6 +382,15 @@ transition: all .5s ease 0s;
   border-radius: 5px;
   padding: 30px 10px;
 }
+.corporate-block .w-25:nth-child(2) .corporate-content {
+background: #dff8ff;
+}
+.corporate-block .w-25:nth-child(3) .corporate-content {
+background: #ffefdf;
+}
+.corporate-block .w-25:nth-child(4) .corporate-content {
+background: #e6f9e5;
+}
 .w-25 {
   padding: 10px;margin-bottom: 0px;
 }
@@ -401,7 +415,33 @@ transition: all .5s ease 0s;
 	display: none;
 }
 .banner-content-block {
-  bottom: 45%;
+  bottom: 45%;    width: 100%;
+}
+.booknow-block {
+  width: 20px;
+  overflow: hidden;
+}
+.banner-content-block h2 {
+  font-size: 14px;
+  line-height: 18px;
+  display: block !important;
+  width: 130px;
+  margin: 0px auto;
+  margin-bottom: 15px;
+}
+.banner-content-block .book-btn {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+.banner-content-block {
+  bottom: 30%;
+  width: 100%;
 }
 
+}
+
+@media (max-width: 420px) {
+  .w-25 {
+  width: 100%;
+}
 }
