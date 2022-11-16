@@ -277,6 +277,25 @@ overflow: hidden;
   transform: translateX(-143%);
   visibility: hidden;opacity: 0;
 }
+.what-sec {
+  position: relative;
+}
+.what-sec::before {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 726px;
+  background: url('../img/bg-after.png') no-repeat;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+
+
+
 
 
 
@@ -363,12 +382,28 @@ transition: all .5s ease 0s;
 .corporate-content {
   height: 60vw;
 }
+.what-sec::before {display: none;}
+.what-block {
+  flex-wrap: wrap;
+}
+.des-block {
+  padding-top: 0;
+}
 
 }
 
 @media (max-width: 767px) {
 	.booknow-block .btn {
   display: none;
+}
+.booknow-block .ph-icon {
+  background: #e74c25;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  font-size: 0;
+  align-items: center;
+  justify-content: center;
 }
 .booknow-block ul li a.ph-icon {
   padding: 0;
@@ -405,30 +440,18 @@ background: #e6f9e5;
   margin: 10px auto;
   margin-bottom: 20px;
 }
-.what-block {
-  flex-wrap: wrap;
-}
-.des-block {
-  padding-top: 0;
-}
-.banner-content-block h2, .banner-icon-block {
-	display: none;
+
+.banner-icon .d-flex {
+  display: none;
 }
 .banner-content-block {
   bottom: 45%;    width: 100%;
 }
 .booknow-block {
-  width: 20px;
+  width: 35px;
   overflow: hidden;
 }
-.banner-content-block h2 {
-  font-size: 14px;
-  line-height: 18px;
-  display: block !important;
-  width: 130px;
-  margin: 0px auto;
-  margin-bottom: 15px;
-}
+
 .banner-content-block .book-btn {
   font-size: 12px;
   padding: 6px 12px;
@@ -437,11 +460,64 @@ background: #e6f9e5;
   bottom: 30%;
   width: 100%;
 }
+.banner-icon {
+  width: 40px;
+}
+.banner-icon img.banner-bottom-img {
+  bottom: -25px;
+}
+.banner-icon img.banner-bottom-img.insta-banner {
+  bottom: -32px;
+  left: 2px;
+}
+.banner-content-block h2 {
+  font-size: 25px;
+  width: 300px;
+  line-height: 1.2;
+  margin: 0px auto;
+  margin-bottom: 15px;
+}
+.booknow-block ul li a.ph-icon img {
+  margin: 0;
+  filter: sepia(1) saturate(0) brightness(100) hue-rotate(135deg);
+}
 
+}
+
+@media (max-width: 520px) {
+  .banner-content-block h2 {
+  font-size: 14px;
+  line-height: 18px;
+  display: block !important;
+  width: 130px;
+  margin-bottom: 10px;
+}
 }
 
 @media (max-width: 420px) {
   .w-25 {
   width: 100%;
+}
+.banner-icon {
+  left: -17px;
+}
+.banner-icon.banner-icon-end-block {
+  left: auto;
+  right: -10px;
+}
+
+
+}
+
+@media (max-width: 360px) {
+  .banner-content-block {
+  bottom: 10%;
+}
+.banner-content-block .book-btn {
+  font-size: 12px;
+  padding: 5px 5px;
+  position: relative;
+  top: 7px;
+  left: -4px;
 }
 }
